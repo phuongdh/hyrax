@@ -262,8 +262,8 @@ body.dashboard {
       border-right: 1px solid $panel-default-border;
     }
 
-    .analytics-borderless {
-      border: 0;
+    li.analytics-borderless {
+      border: none;
     }
   }
 
@@ -288,5 +288,7 @@ body.dashboard {
 
   .pinned {
     fill: #ffd700;
+    text-decoration: none;
+    cursor: default;
   }
 }

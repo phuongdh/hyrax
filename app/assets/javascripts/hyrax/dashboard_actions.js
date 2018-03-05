@@ -30,11 +30,11 @@ Blacklight.onLoad(function() {
    * @param item
    */
   function show_details(item) {
-    var array = item.id.split("expand_");
-    if (array.length > 1) {
-      var docId = array[1];
-      $("#detail_" + docId + " .expanded-details").slideToggle();
-      $(item).toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
-    }
+      var array = item.id.split("expand_");
+      if (array.length > 1) {
+          var docId = array[1];
+          $("#detail_" + docId + " .expanded-details").slideToggle();
+          $(item).toggleClass('glyphicon-chevron-right glyphicon-chevron-down');
+      }
   }
 });

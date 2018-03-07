@@ -24,7 +24,7 @@ Blacklight.onLoad(function() {
   });
   
   /**** Private functions ****/
-
+  
   /**
    *  Shows details of expanded item
    * @param item

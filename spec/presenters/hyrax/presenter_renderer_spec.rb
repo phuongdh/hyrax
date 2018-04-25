@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::PresenterRenderer, type: :view do
   let(:work) { GenericWork.new }
   let(:ability) { double }

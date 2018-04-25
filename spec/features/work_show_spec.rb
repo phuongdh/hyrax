@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe "display a work as its owner" do
   let(:work_path) { "/concern/generic_works/#{work.id}" }
 

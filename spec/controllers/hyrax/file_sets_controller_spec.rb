@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::FileSetsController do
   routes { Rails.application.routes }
   let(:user) { create(:user) }

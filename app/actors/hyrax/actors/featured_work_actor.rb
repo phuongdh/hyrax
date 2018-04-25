@@ -1,4 +1,5 @@
 
+# frozen_string_literal: true
 module Hyrax
   module Actors
     # Removes featured works if the work is deleted or becomes private

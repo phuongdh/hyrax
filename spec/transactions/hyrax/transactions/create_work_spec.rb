@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::Transactions::CreateWork do
   subject(:transaction) { described_class.new }
   let(:work)            { build(:generic_work) }

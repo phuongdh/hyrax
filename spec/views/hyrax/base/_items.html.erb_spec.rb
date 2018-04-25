@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe 'hyrax/base/_items.html.erb', type: :view do
   let(:ability) { double }
   let(:presenter) { double(:presenter, member_presenters: member_presenters, id: 'the-id', human_readable_type: 'Thing') }

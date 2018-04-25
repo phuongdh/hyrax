@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hyrax
   class DownloadsController < ApplicationController
     include Hydra::Controller::DownloadBehavior
@@ -76,7 +77,7 @@ module Hyrax
                                    DownloadsController.default_content_path
                                  end
         association = dereference_file(default_file_reference)
-        association.reader if association
+        association&.reader
       end
 
       def mime_type_for(file)

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hyrax
   # Presents the options for the Collection widget on the create/edit form
   class CollectionOptionsPresenter

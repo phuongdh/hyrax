@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::GrantReadJob do
   let(:depositor) { create(:user) }
   let(:file_set) { build(:file_set) }

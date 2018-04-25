@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe 'hyrax/base/_form.html.erb', type: :view do
   let(:work) do
     stub_model(GenericWork, id: '456')

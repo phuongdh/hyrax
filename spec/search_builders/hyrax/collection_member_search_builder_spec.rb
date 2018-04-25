@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::CollectionMemberSearchBuilder do
   let(:context) { double("context", blacklight_config: CatalogController.blacklight_config) }
   let(:solr_params) { { fq: [] } }

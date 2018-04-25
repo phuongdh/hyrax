@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::Transactions::Steps::SetDefaultAdminSet do
   subject(:step) { described_class.new }
   let(:work)     { build(:generic_work) }
@@ -29,7 +30,7 @@ RSpec.describe Hyrax::Transactions::Steps::SetDefaultAdminSet do
       it 'does not change the admin_set' do
         expect { step.call(work) }
           .not_to change { work.admin_set&.id }
-                    .from(admin_set.id)
+          .from(admin_set.id)
       end
     end
   end

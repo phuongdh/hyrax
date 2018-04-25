@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hyrax
   class InspectWorkPresenter
     def initialize(solr_document, current_ability)
@@ -43,7 +44,7 @@ module Hyrax
       end
 
       def workflow_comments
-        return [] unless sipity_entity && sipity_entity.comments.count > 0
+        return [] unless sipity_entity&.comments&.count > 0
         sipity_entity.comments.map do |comment|
           { comment: comment.comment, created_at: comment.created_at }
         end

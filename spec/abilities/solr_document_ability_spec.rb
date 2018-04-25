@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'cancan/matchers'
 
 # rubocop:disable RSpec/EmptyExampleGroup

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::Transactions::Steps::SetUploadedDate do
   subject(:step) { described_class.new }
   let(:work)     { build(:generic_work) }

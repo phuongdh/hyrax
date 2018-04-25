@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hyrax
   class SingleUseLinksController < ApplicationController
     include Blacklight::SearchHelper
@@ -9,7 +10,7 @@ module Hyrax
     rescue_from Hydra::AccessDenied, CanCan::AccessDenied, with: :deny_link_access
 
     def deny_link_access(exception)
-      if current_user && current_user.persisted?
+      if current_user&.persisted?
         redirect_to main_app.root_url, alert: "You do not have sufficient privileges to create links to this document"
       else
         session["user_return_to"] = request.url

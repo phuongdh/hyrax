@@ -1,10 +1,11 @@
+# frozen_string_literal: true
 module Hyrax
   # The database storage of inter-related jobs and their states.
   class Operation < ActiveRecord::Base
-    PENDING = 'pending'.freeze
-    PERFORMING = 'performing'.freeze
-    FAILURE = 'failure'.freeze
-    SUCCESS = 'success'.freeze
+    PENDING = 'pending'
+    PERFORMING = 'performing'
+    FAILURE = 'failure'
+    SUCCESS = 'success'
 
     enum(
       status: {
@@ -45,10 +46,8 @@ module Hyrax
     def rollup_messages
       [].tap do |messages|
         messages << message if message.present?
-        if children
-          children.pluck(:message).uniq.each do |child_message|
-            messages << child_message if child_message.present?
-          end
+        children&.pluck(:message)&.uniq&.each do |child_message|
+          messages << child_message if child_message.present?
         end
       end
     end
@@ -63,7 +62,7 @@ module Hyrax
     def success!
       run_callbacks :success do
         update(status: SUCCESS)
-        parent.rollup_status if parent
+        parent&.rollup_status
       end
     end
 
@@ -78,7 +77,7 @@ module Hyrax
     def fail!(message = nil)
       run_callbacks :failure do
         update(status: FAILURE, message: message)
-        parent.rollup_status if parent
+        parent&.rollup_status
       end
     end
 

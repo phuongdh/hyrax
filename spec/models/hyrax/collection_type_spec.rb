@@ -134,11 +134,11 @@ RSpec.describe Hyrax::CollectionType, type: :model do
   end
 
   describe "collections" do
-    let!(:collection) { create(:collection, collection_type_gid: collection_type.gid.to_s) }
+    let!(:collection) { create(:collection, collection_type_gid: collection_type.gid) }
     let(:collection_type) { create(:collection_type) }
 
     it 'returns collections of this collection type' do
-      expect(collection_type.collections.to_a).to include collection
+      expect(collection_type.collections).to include collection
     end
 
     it 'returns empty array if gid is nil' do

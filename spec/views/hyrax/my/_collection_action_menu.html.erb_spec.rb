@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe 'hyrax/my/_collection_action_menu.html.erb' do
   let(:id) { '123' }
   let(:collection) { create(:collection, id: id) }

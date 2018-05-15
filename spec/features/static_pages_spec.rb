@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe "The static pages" do
   it do
     visit root_path

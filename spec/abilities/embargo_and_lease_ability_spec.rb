@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'cancan/matchers'
 
 RSpec.describe "Ability on embargos and leases" do

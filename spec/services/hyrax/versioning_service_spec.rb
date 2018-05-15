@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::VersioningService do
   describe '#latest_version_of' do
     let(:user) { build(:user) }

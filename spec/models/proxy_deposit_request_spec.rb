@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe ProxyDepositRequest, type: :model do
   let(:sender) { create(:user) }
   let(:receiver) { create(:user) }

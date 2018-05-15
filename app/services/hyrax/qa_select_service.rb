@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hyrax
   # This is an abstract class to provide select options from a
   # questioning authority backed authority

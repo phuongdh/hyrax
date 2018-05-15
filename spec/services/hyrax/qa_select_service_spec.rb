@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::QaSelectService do
   let(:authority) do
     # Implementing an ActiveRecord interface as required for this spec

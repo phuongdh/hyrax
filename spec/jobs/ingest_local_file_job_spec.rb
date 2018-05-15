@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe IngestLocalFileJob do
   let(:user) { create(:user) }
 

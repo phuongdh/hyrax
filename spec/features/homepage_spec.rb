@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe "The homepage" do
   let(:work1) { create(:work, :public, title: ['Work 1']) }
 

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::CollectionOptionsPresenter do
   before { allow(Deprecation).to receive(:warn) }
 

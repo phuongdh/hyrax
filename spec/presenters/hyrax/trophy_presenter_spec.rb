@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe Hyrax::TrophyPresenter do
   describe "find_by_user" do
     let(:user) { create(:user) }

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Sipity
   # A proxy for the entity that is being processed.
   # By using a proxy, we need not worry about polluting the proxy's concerns
@@ -28,7 +29,7 @@ module Sipity
              class_name: 'Sipity::Comment'
 
     def workflow_state_name
-      workflow_state.name if workflow_state
+      workflow_state&.name
     end
 
     # Defines the method #workflow_name

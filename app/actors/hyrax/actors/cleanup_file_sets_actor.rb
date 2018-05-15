@@ -1,4 +1,5 @@
 
+# frozen_string_literal: true
 module Hyrax
   module Actors
     # Responsible for removing FileSets related to the given curation concern.

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hyrax::Controller
   extend ActiveSupport::Concern
 
@@ -37,7 +38,7 @@ module Hyrax::Controller
       # For the JSON message, we don't want to display the default CanCan messages,
       # just custom Hydra messages such as "This item is under embargo.", etc.
       json_message = exception.message if exception.is_a? Hydra::AccessDenied
-      if current_user && current_user.persisted?
+      if current_user&.persisted?
         deny_access_for_current_user(exception, json_message)
       else
         deny_access_for_anonymous_user(exception, json_message)
@@ -58,7 +59,7 @@ module Hyrax::Controller
     end
 
     def deny_access_for_anonymous_user(exception, json_message)
-      session['user_return_to'.freeze] = request.url
+      session['user_return_to'] = request.url
       respond_to do |wants|
         wants.html { redirect_to main_app.new_user_session_path, alert: exception.message }
         wants.json { render_json_response(response_type: :unauthorized, message: json_message) }

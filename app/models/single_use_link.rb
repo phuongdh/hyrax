@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class SingleUseLink < ActiveRecord::Base
   validate :expiration_date_cannot_be_in_the_past
   validate :cannot_be_destroyed

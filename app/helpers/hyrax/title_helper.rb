@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Hyrax::TitleHelper
   def application_name
     t('hyrax.product_name', default: super)

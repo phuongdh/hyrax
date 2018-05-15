@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe 'Editing a work', type: :feature do
   let(:user) { create(:user) }
   let(:work) { build(:work, user: user, admin_set: another_admin_set) }

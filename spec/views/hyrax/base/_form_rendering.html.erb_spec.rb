@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe 'hyrax/base/_form_rendering.html.erb', type: :view do
   let(:ability) { double }
   let(:work) { create(:work_with_one_file) }

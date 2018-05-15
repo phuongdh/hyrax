@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 RSpec.describe AttachFilesToWorkJob, perform_enqueued: [AttachFilesToWorkJob] do
   context "happy path" do
     let(:file1) { File.open(fixture_path + '/world.png') }

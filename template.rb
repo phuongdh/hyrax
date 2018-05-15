@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 gem 'hyrax', '2.1.0.rc1'
 run 'bundle install'
 generate 'hyrax:install', '-f'

@@ -48,6 +48,10 @@ Metrics/MethodLength:
     - 'lib/hyrax/rails/routes.rb'
     - 'spec/support/**/*'
 
+Naming/FileName:
+  Exclude:
+    - 'Gemfile' # excluded upstream, but overridden here
+    - 'config/initializers/samvera-nesting_indexer_initializer.rb'
 
 Naming/PredicateName:
   Exclude:

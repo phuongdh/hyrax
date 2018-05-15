@@ -167,7 +167,7 @@ module Hyrax
         child_depth = NestingAttributes.new(id: child.id, scope: scope).depth
         nesting_depth = descendant_depth - child_depth + 1
 
-        return nesting_depth if nesting_depth > 0 # this should always be > 0, but just being safe
+        return nesting_depth if nesting_depth.positive? # this should always be > 0, but just being safe
         1
       end
       private_class_method :child_nesting_depth

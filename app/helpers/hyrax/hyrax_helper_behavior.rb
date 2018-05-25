@@ -257,6 +257,10 @@ module Hyrax
       content_tag(:span, "", class: [Hyrax::ModelIcon.css_class_for(Collection), "collection-icon-search"])
     end
 
+    def collection_title_by_id(id)
+      controller.repository.find(id).docs.first["title_tesim"].first
+    end
+
     private
 
       def user_agent

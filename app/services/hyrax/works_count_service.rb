@@ -16,7 +16,7 @@ module Hyrax
       sort_column = Integer(@params[:order]['0'][:column])
       sort_ordering = @params[:order]['0'][:dir]
       results = []
-      
+
       works.each do |work|
         created_date = DateTime.parse(work['system_create_dtsi']).in_time_zone.strftime("%Y-%m-%d")
         results << [work['title_tesim'][0], created_date, 0, work['human_readable_type_tesim'][0], work['visibility_ssi']]
